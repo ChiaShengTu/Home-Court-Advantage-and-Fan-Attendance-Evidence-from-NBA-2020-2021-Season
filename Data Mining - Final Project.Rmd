@@ -481,7 +481,7 @@ Rockets_forest = randomForest(fg_diff ~ v_btb + h_btb +
 
 ```
 
-```{r team specific model results 2,  message=FALSE, echo=FALSE, warning=FALSE}
+```{r team specific model results 2,  cache=TRUE, echo=FALSE, results = 'asis'}
 rmse_Mavericks_forest = rmse(Mavericks_forest, Mavericks_test)
 rmse_Spurs_forest = rmse(Spurs_forest, Spurs_test)
 rmse_Rockets_forest = rmse(Rockets_forest, Rockets_test)
