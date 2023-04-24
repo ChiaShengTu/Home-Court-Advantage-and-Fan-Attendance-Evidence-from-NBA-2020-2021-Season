@@ -38,7 +38,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r data cleaning again, echo=FALSE}
-nbafans <- read_dta("Data/nbafans2.dta")
+nbafans <- read.csv("Data/nbafans2.csv")
 
 nbafans <- na.exclude(nbafans)
 nbafans$startet = nbafans$startet %>% factor()
@@ -276,15 +276,17 @@ The findings demonstrate that fan attendance increases the home team's point dif
 ```{r prediction model, cache=TRUE, echo=FALSE}
 
 #### Overall Data - points ####
+set.seed(123)
 nbafans_split = initial_split(nbafans, prop = 0.8)
 nbafans_train = training(nbafans_split)
 nbafans_test = testing(nbafans_split)
 
 #
 nbafans_tree = rpart(homemargin ~ v_btb + h_btb +
-                       weekend + startet 
-                     + strong_home  + finish +
-                       att_rate + month, 
+                                weekend + startet 
+                               + finish +
+                                att_rate + month
+                                , 
                      data = nbafans_train,
                      control = rpart.control(cp = 0.02, minsplit=300),
                      maxdepth = 4)
@@ -325,9 +327,11 @@ Although we suspect that the back-to-back game and games on the weekend bias the
 ### B. Field Goal Percentage (FG%)
 
 ```{r fg specific model, cache=TRUE, echo=FALSE}
-nbafans_tree2 = rpart(fg_diff ~v_btb + h_btb +
-                        weekend + startet +
-                        att_rate + month + note + finish, 
+nbafans_tree2 = rpart(fg_diff ~
+                                 v_btb + h_btb +
+                                 weekend + startet 
+                               + strong_home + att_rate + month + note + finish +
+                                 homeneutral, 
                      data = nbafans_train,
                      control = rpart.control(cp = 0.02, minsplit=300),
                      maxdepth = 4)
