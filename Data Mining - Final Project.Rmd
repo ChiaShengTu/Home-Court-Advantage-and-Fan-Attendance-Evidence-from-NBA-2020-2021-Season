@@ -39,7 +39,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r data cleaning again, echo=FALSE}
 nbafans <- read.csv("Data/nbafans2.csv")
-
+set.seed(123)
 nbafans <- na.exclude(nbafans)
 nbafans$startet = nbafans$startet %>% factor()
 nbafans$date = nbafans$date %>% factor()
@@ -169,6 +169,7 @@ These statistics provide us with a starting point for understanding the relation
 
 ```{r visualizations - Table 1, echo=FALSE, results = 'asis'}
 st(nbafans, vars = c('homemargin', 'homewin', 'fandum', 'att1000', 'occ','h_btb','v_btb' ))
+
 knitr::include_graphics("Table/table1.png")
 ```
 
