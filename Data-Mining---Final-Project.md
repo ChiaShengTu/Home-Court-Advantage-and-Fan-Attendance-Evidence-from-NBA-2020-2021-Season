@@ -445,11 +445,11 @@ statistical significance.
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Tree</td>
-<td style="text-align: right;">16.04336</td>
+<td style="text-align: right;">15.17984</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Forest</td>
-<td style="text-align: right;">16.40788</td>
+<td style="text-align: right;">15.09890</td>
 </tr>
 </tbody>
 </table>
@@ -478,7 +478,7 @@ weekend are the least important variables to our model’s accuracy.
 </tr>
 <tr class="even">
 <td style="text-align: left;">Forest</td>
-<td style="text-align: right;">0.2567102</td>
+<td style="text-align: right;">0.2467102</td>
 </tr>
 </tbody>
 </table>
@@ -502,15 +502,15 @@ our model’s accuracy.
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Mavericks Forest</td>
-<td style="text-align: right;">14.97487</td>
+<td style="text-align: right;">12.04230</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Spurs Forest</td>
-<td style="text-align: right;">18.26306</td>
+<td style="text-align: right;">17.87583</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Rockets Forest</td>
-<td style="text-align: right;">14.23201</td>
+<td style="text-align: right;">16.96573</td>
 </tr>
 </tbody>
 </table>
