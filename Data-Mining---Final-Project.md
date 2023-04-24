@@ -530,6 +530,29 @@ much more precisely than for the Spurs.
 
 #### B. FG% Difference
 
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Model</th>
+<th style="text-align: right;">RMSE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Mavericks Forest</td>
+<td style="text-align: right;">0.2488026</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Spurs Forest</td>
+<td style="text-align: right;">0.3099657</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Rockets Forest</td>
+<td style="text-align: right;">0.2403391</td>
+</tr>
+</tbody>
+</table>
+
 Similar to the results of the team points difference importance plots,
 more robust findings for the Mavericks are observed when splitting off
 the data. Also, audience attendance rate plays an important role when
